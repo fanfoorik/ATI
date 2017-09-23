@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "globals": {
+    "document": true,
+    "localStorage": true,
+    "window": true,
+    "XMLHttpRequest": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": ["error", {
+      "allow": ["group", "groupEnd", "info", "error", "warn"]
+    }],
+    "linebreak-style": ["error", "windows"]
+  }
+}

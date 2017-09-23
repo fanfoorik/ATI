@@ -1,0 +1,229 @@
+@import "reset";
+@import "base";
+@import "mixins";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.details {
+  padding-top: 40px;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+
+  &__container {
+    min-height: 160px;
+  }
+
+  &__cover {
+    font-size: 16px;
+    color: $c-light-grey;
+    padding-top: 50px;
+  }
+
+  &__close {
+    color: $c-red;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.detail-item {
+  padding-bottom: 12px;
+  font-size: 14px;
+
+  &__key {
+    font-weight: bold;
+  }
+
+  &__value {
+    word-wrap: break-word;
+
+    &_id {
+      color: $c-light-grey;
+    }
+  }
+}
+
+.columns {
+  &__left {
+    @include respond(md) {
+      float: left;
+      width: 65%;
+      margin-right: 30px;
+    }
+  }
+
+  &__right {
+    @include respond(md) {
+      overflow: hidden;
+    }
+  }
+}
+
+.controls {
+  margin-bottom: 10px;
+}
+
+.controls-field {
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.controls-input {
+  height: 34px;
+  padding: 5px 10px;
+  border: 1px solid $bd-grey;
+}
+
+.controls-select {
+  height: 34px;
+  padding: 5px 10px;
+  border: 1px solid $bd-grey;
+}
+
+.controls-button {
+  height: 34px;
+  padding: 5px 15px;
+  background: $bg-green;
+  color: $c-white;
+  border-width: 0;
+
+  &:hover {
+    background: darken($bg-green, 3);
+  }
+
+  &:active {
+    background: darken($bg-green, 6);
+  }
+}
+
+.result {
+  margin-bottom: 20px;
+  min-height: 160px;
+
+  @include respond(md) {
+    min-height: 200px;
+    margin-bottom: 60px;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__cover {
+    padding: 40px 0;
+    color: $c-light-grey;
+  }
+}
+
+.item-list {
+  padding: 0 68px 0 8px;
+  border-top: 1px solid $c-light-grey;
+  position: relative;
+  min-height: 30px;
+
+  &__text {
+    display: block;
+    padding: 20px 0;
+    line-height: 1.6;
+    word-wrap: break-word;
+
+    &_clickable {
+      cursor: pointer;
+
+      &:hover {
+        color: $c-blue;
+      }
+    }
+  }
+
+  &__like-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    height: 22px;
+    margin-top: -11px;
+    padding: 0 10px;
+    background: $bg-yellow;
+    border-width: 0;
+    font-size: 12px;
+
+    &:hover {
+      background: darken($bg-yellow, 10);
+    }
+
+    &:active {
+      background: darken($bg-yellow, 20);
+    }
+  }
+}
+
+.likes-list {
+  margin-bottom: 40px;
+}
+
+.like-item {
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    display: block;
+    white-space: nowrap;
+    padding: 8px;
+
+    &:hover {
+      background: $bg-light-grey;
+      cursor: pointer;
+    }
+  }
+
+  &__dislike-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 22px;
+    margin-top: -11px;
+    padding: 0 10px;
+    background: $bg-red;
+    border-width: 0;
+    font-size: 12px;
+    color: $c-white;
+    box-shadow: -10px 0 10px $c-white;
+
+    &:hover {
+      background: lighten($bg-red, 8);
+    }
+
+    &:active {
+      background: darken($bg-red, 4);
+    }
+  }
+}
+
+.highlight {
+  color: $c-red;
+  text-decoration: underline;
+}
+
+.feed {
+  clear: both;
+  min-height: 30px;
+
+  &::after {
+    display: block;
+    width: 100%;
+    padding: 10px 0 20px;
+    text-align: center;
+    content: "Loading feed...";
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+  <title>Document</title>
+</head>
+<body>
+  <div id="root" class="root">
+    <div class="container">
+      <div class="details">
+        <h1 class="details__title">Details</h1>
+        <div class="details__container" id="jsDetails">
+          <div class="details__cover">Select joke to view details</div>
+        </div>
+      </div>
+      <section class="columns">
+        <section class="columns__left">
+          <h2>Get Chuck joke</h2>
+          <div class="controls clear">
+            <div class="controls-field controls-field_input-block">
+              <input class="controls-input" type="text" name="" id="jsSearchInput" />
+            </div>
+            <div class="controls-field controls-field__select-block">
+              <select class="controls-select" id="jsSearchLimiter">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="all">all</option>
+              </select>
+            </div>
+            <div class="controls-field controls-field__button-block">
+              <button class="controls-button" id="jsRandomItem">get random joke</button>
+            </div>
+          </div>
+          <div class="result" id="jsResultPanel">
+            <div class="result__cover">Start searching or click "get random joke" button.</div>
+          </div>
+        </section>
+        <aside class="columns__right">
+          <h3>Liked items</h3>
+          <div class="likes-list" id="jsLikesList"></div>
+        </aside>
+      </section>
+      <div class="columns">
+        <section class="columns__left">
+          <div class="h2">Feed</div>
+          <div class="feed" id="jsFeed"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
